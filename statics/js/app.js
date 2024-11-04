@@ -24,6 +24,33 @@ function reveal() {
         reveals[i].classList.remove("active")
       }
     }
-  }
+}
   
-  window.addEventListener("scroll", reveal)
+window.addEventListener("scroll", reveal)
+
+// Sélectionne toutes les sections avec la classe "section"
+const sections = document.querySelectorAll('.section');
+
+// Fonction pour ajuster la hauteur
+function setMinHeight() {
+    let maxHeight = 0;
+
+    // Trouver la hauteur maximale parmi les sections
+    sections.forEach(section => {
+        const sectionHeight = section.offsetHeight;
+        if (sectionHeight > maxHeight) {
+            maxHeight = sectionHeight;
+        }
+    });
+
+    // Appliquer la hauteur maximale comme min-height à toutes les sections
+    sections.forEach(section => {
+        section.style.minHeight = maxHeight + 'px';
+    });
+}
+
+// Appeler la fonction au chargement de la page et lors du redimensionnement
+window.addEventListener('load', setMinHeight);
+window.addEventListener('resize', setMinHeight);
+
+

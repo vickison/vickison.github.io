@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./statics/css/styles.css">
-    
-    <title>Portfolio De Vicky</title>
+    <title id="title">Portfolio De Vicky</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg fixed-top navbarScroll">
@@ -16,167 +15,163 @@
                 <a href="#" class="navbar-brand">Vicky</a>
                 <a href="#" class="navbar-brand">Vicky</a>
             </div>
-            
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto nav">
                     <li class="nav-item active">
-                        <a class="nav-link menu" href="#">Accueil</a>
+                        <a class="nav-link menu" id="homeLink" href="#">Accueil</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link menu" href="#about">A propos</a>
+                        <a class="nav-link menu" id="aboutLink" href="#about">A propos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link menu" href="#portfolio">Portfolio</a>
+                        <a class="nav-link menu" id="portfolioLink" href="#portfolio">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link menu" href="#contact">Contact</a>
+                        <a class="nav-link menu" id="contactLink" href="#contact">Contact</a>
                     </li>
                 </ul>
+                <div class="dropdown" >
+                    <span id="languageDisplay">Français</span>
+                    <div class="dropdown-content">
+                        <a href="#" onclick="setLanguage('fr')">Français</a>
+                        <a href="#" onclick="setLanguage('en')">English</a>
+                    </div>
+                </div>
             </div>
+            
         </div>
     </nav>
-    <!----my hero header-->
-    <section class="bg-image" id="banner">
+
+    <section class="bg-image section" id="banner">
         <div class="container-fluid">
             <div class="row hero">
                 <div class="col-lg-12 col-md-12 col-xs-12 hero-text">
-                    <div class="hero-title">
-                        Hello, Je suis BIEN-AIME A. Vicky.
+                    <div class="hero-title" id="heroTitle">
+                        Hello, je suis BIEN-AIME A. Vicky.
                     </div>
                 </div>
                 <div>
-                    <p class="hero-desc">Je suis ingénieur électronique, analyste programmeur</p>
+                    <p class="hero-desc" id="heroDesc">Ingénieur électronique & analyste programmeur.</p>
                 </div>
                 <div>
-                    <a href="./statics/resume/mon_cv.docx" class="btn-resume">Mon CV</a>
+                    <a href="./statics/resume/mon_cv.docx" class="btn-resume" id="resume">Mon Résumé</a>
                 </div>
             </div>
+            <!-- <h1 id="heroTitle">Hello, je suis BIEN-AIME A. Vicky.</h1> -->
+            <!-- <p id="heroDesc">Je suis ingénieur électronique, analyste programmeur.</p> -->
+              
         </div>
+        
     </section>
-    <!----my about section-->
-    <section id="about">
+
+    <section id="about" class="section">
         <div class="container mt-4 pt-4 reveal">
-            <h1 class="text-center">A propos de moi</h1>
+            <h1 class="text-center" id="aboutTitle">À propos de moi</h1>
             <div class="row mt-4">
                 <div class="col-lg-4">
                     <img src="./statics/images/about .jpg" alt="" class="img-about">
                 </div>
                 <div class="col-lg-8">
-                    <strong>Nom(s) & Nationalité:</strong>
-                    <p style="padding-left: 15px;">Nom complet: BIEN-AIME Alias Vicky</p>
-                    <p style="padding-left: 15px;">Je suis haitien d'origine et de nationalité.</p>
-                    <strong>Formations:</strong>
-                    <p style="padding-left: 15px;">
-                        Hello! Je suis ingénieur formé à la Faculté des Science(FDS) l'Université d'Etat d'Haiti(UEH). <br>
-                        Je suis certifié en "web programming with python and javascript" à edx un cours offert par Harvardx.<br>
-                        J'ai les bases de la programmation avec des cours d'algorithmes et de strutures de données en c puis le Java,<br> 
-                        ainsi que des cours sur les systèmes d'exploitations à l'université.<br> 
-                        
+                    <strong id="nameNationalityTitle">Nom(s) & Nationalité(s):</strong>
+                    <p id="fullName" style="padding-left: 15px;">Nom complet: BIEN-AIME Alias Vicky</p>
+                    <p id="nationality" style="padding-left: 15px;">Je suis haïtien d'origine et de nationalité.</p>
+                    
+                    <strong id="educationTitle">Formations:</strong>
+                    <p id="educationContent" style="padding-left: 15px;">
+                        Formation d'ingenerie électronique - Faculté des Sciences(FDS) de l'Université d'État d'Haïti(UEH).<br>
+                        Formation web Python / javascript - edX<br>
+                        Formation web Spring Boot / React - Udemy
                     </p>
                     <div class="row mt-3">
-                        <strong>Compétences:</strong>
+                        <strong id="skillsTitle">Compétences:</strong>
                         <p>
-                            <ul class="skills">
-                                Mes compétences:
-                                <li>Je suis familier(pile, file, liste chainée, ...)</li>
-                                <li>Je suis familier aves les langages: c, assembleur, python, java and javascript</li>
-                                <li>Habilité abec MySQL, PostgreSQL, SqlLite</li>
-                                <li>Framework and librairies used: Django, ajax, pyqt</li>
-                                <li>Text editor utilisé: vscode, code blocks, netbeans</li>
-                                <li>Habilité avec les sustèmes d'exploitations : linux et windows</li>
-                                <li>Autres outils: git, github, aws</li>
+                            <ul class="skills" id="skillsList">
+                                <li>Je suis familier avec les structures de données (pile, file, liste chaînée, ...).</li>
+                                <li>Langages: C, Assembleur, Python, Java et JavaScript.</li>
+                                <li>Gestionnaires de base de données: Oracle, MySQL, PostgreSQL, SQLite.</li>
+                                <li>Outils: git, github, aws.</li>
                             </ul>
-                        </p>
+                        </p> 
                     </div>
+                    <strong id="experienceTitle">Expériences:</strong>
+                    <p id="experienceContent" style="padding-left: 15px;">
+                        Novembre 2022 - Mai 2023 | Position de stagiaire à la digicel HT dans le departement transmission.<br>
+                        Juillet 2023 - Septembre 2023 | Position de stagiaire à la Turbo System SA comme analyste programmeur.<br>
+                        Octobre 2023 - Présent | Analyste programmeur Junior à la Turbo System SA.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
-    <!----my portfolio section-->
-    <section id="portfolio">
+
+    <section id="portfolio" class="section">
         <div class="container mt-3 reveal">
-            <h1 class="text-center">Portfolio</h1>
+            <h1 class="text-center" id="portfolioTitle">Portfolio</h1>
             <div class="row">
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img src="./statics/images/aunction.jpg" alt="Card Image" class="card-img-top" >
+                        <img src="./statics/images/aunction.jpg" alt="Un site eCommerce" style="width:100%;" class="card-img-top">
+                        <h4 class="card-title" id="ecommerceTitle">Un site eCommerce</h4>
                         <div class="card-body">
-                            <h4 class="card-title">Un site eCommerce</h4>
-                            <p class="card-text">
-                                Type de projet: application web<br>
-                                Backend: Python(Django)<br>
-                                Frontend: javascript<br>
-                                Base de donées: SQLite<br>
-                            </p>
+                            <p class="card-text" id="ecommerceDesc">Type de projet: application web<br>Backend: Python(Django)<br>Frontend: JavaScript<br>Base de données: SQLite</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img src="./statics/images/wiki.jpg" alt="Card Image" class="card-img-top" style="width: 100%;">
+                        <img src="./statics/images/wiki.jpg" alt="Un site d'encyclopédie" style="width:100%;" class="card-img-top">
+                        <h4 class="card-title" id="encyclopediaTitle">Un site d'encyclopédie</h4>
                         <div class="card-body">
-                            <h4 class="card-title">Un site d'encyclopedie</h4>
-                            <p class="card-text">
-                                Type de projet: application web<br>
-                                Backend: Python(Django)<br>
-                                Frontend: javascript<br>
-                                Base de donées: SQLite<br>
-                            </p>
+                            <p class="card-text" id="encyclopediaDesc">Type de projet: application web<br>Backend: Python(Django)<br>Frontend: JavaScript<br>Base de données: SQLite</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img src="./statics/images/mail.png" alt="Card Image" class="card-img-top" style="width: 100%;">
+                        <img src="./statics/images/mail.png" alt="Un site de services de mail" style="width:100%;" class="card-img-top">
+                        <h4 class="card-title" id="mailServiceTitle">Un site de services de mail</h4>
                         <div class="card-body">
-                            <h4 class="card-title">Un site de services de mail</h4>
-                            <p class="card-text">
-                                Type de projet: application web<br>
-                                Backend: Python(Django)<br>
-                                Frontend: javascript<br>
-                                Base de donées: SQLite<br>
-                            </p>
+                            <p class="card-text" id="mailServiceDesc">Type de projet: application web<br>Backend: Python(Django)<br>Frontend: JavaScript<br>Base de données: SQLite</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img src="./statics/images/network.jpg" alt="Card Image" class="card-img-top" style="width: 100%;">
+                        <img src="./statics/images/network.jpg" alt="Un site de réseaux sociaux" style="width:100%;" class="card-img-top">
+                        <h4 class="card-title" id="socialNetworkTitle">Un site de réseaux sociaux</h4>
                         <div class="card-body">
-                            <h4 class="card-title">Un site de réseaux sociaux</h4>
-                            <p class="card-text">
-                                Type de projet: application web<br>
-                                Backend: Python(Django)<br>
-                                Frontend: javascript<br>
-                                Base de donées: SQLite<br>
-                            </p>
+                            <p class="card-text" id="socialNetworkDesc">Type de projet: application web<br>Backend: Python(Django)<br>Frontend: JavaScript<br>Base de données: SQLite</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 mt-4">
                     <div class="card">
-                        <img src="./statics/images/elearning.jpg" alt="Card Image" class="card-img-top" style="width: 100%;">
+                        <img src="./statics/images/elearning.jpg" alt="Une plateforme e-learning" style="width:100%;" class="card-img-top">
+                        <h4 class="card-title" id="elearningTitle">Une plateforme e-learning</h4>
                         <div class="card-body">
-                            <h4 class="card-title">Une plateforme elearning</h4>
-                            <p class="card-text">
-                                Type de projet: application web<br>
-                                Backend: Python(Django)<br>
-                                Frontend: javascript<br>
-                                Base de donées: SQLite<br>
-                            </p>
+                            <p class="card-text" id="elearningDesc">Type de projet: application web<br>Backend: Python(Django)<br>Frontend: JavaScript<br>Base de données: SQLite</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-4">
+                    <div class="card">
+                        <img src="./statics/images/digital-library.png" alt="Une plateforme e-library" style="width:100%;" class="card-img-top">
+                        <h4 class="card-title" id="elibraryTitle">Une plateforme e-library</h4>
+                        <div class="card-body">
+                            <p class="card-text" id="elibraryDesc">Type de projet: application web<br>Backend: Java(Spring Boot)<br>Frontend: JavaScript (angular)<br>Base de données: MySQL</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!----my contact section-->
-    <section id="contact">
+
+    <section id="contact" class="section">
         <div class="container mt-3 reveal">
-            <h1 class="text-center">Contactez moi</h1>
+            <h1 class="text-center" id="contactTitle">Contactez-moi</h1>
             <div class="row mt-4">
                 <div class="col-lg-6">
                     <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;">
@@ -194,22 +189,133 @@
                 </div>
                 <div class="col-lg-6">
                     <form id="form" action="https://formspree.io/f/xpznzrbw" method="post">
-                        <input type="text" class="form-control form-control-lg" placeholder="Nom" name="name" id="name" required>
-                        <input type="email" class="form-control mt-3" placeholder="Email" name="email" id="email" required>
-                        <div class="mb-3 mt-3">
-                            <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success mt-3">Contactez moi</button>
+                        <input type="text" class="form-control" placeholder="Nom" name="name" style="margin-bottom: 10px;" required>
+                        <input type="email" class="form-control" placeholder="Email" name="email" style="margin-bottom: 10px;" required>
+                        <textarea class="form-control" rows="5" placeholder="Message" name="message" style="margin-bottom: 10px;" required></textarea>
+                        <button id="btn-submit" type="submit" class="btn btn-success">
+                            <!-- <i class="fa fa-send" style="font-size: 0.8em; height: 100%;"></i> -->
+                            Contactez-moi
+                        </button>
                     </form>
                     <a href="https://web.facebook.com/vicky.leprogrammeur.3/" class="fa fa-facebook"></a>
                     <a href="https://www.linkedin.com/in/bien-aime-alias-vicky-9a024a180?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFg85gO21Q7KlgyMyJZq0OQ%3D%3D" class="fa fa-linkedin"></a>
                     <a href="https://github.com/vickison" class="fa fa-github"></a>
-                    <p style="font-size: 15px;"><strong>Phone:</strong> (+509)41082870/44047117 | <strong>e-mail:</strong> balivick07@gmail.com</p>
+                    <p style="font-size: 15px;"><strong id="phoneTitle">Phone:</strong> (+509)41082870/44047117 | <strong>e-mail:</strong> balivick07@gmail.com</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- <footer>
+        <p>&copy; 2024 Portfolio De Vicky</p>
+    </footer> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <script src="./statics/js/app.js"></script>
+    <script>
+        let language = 'fr'; // "fr" for French, "en" for English
+
+        function setLanguage(lang) {
+            language = lang;
+            if (language === 'en') {
+                updateContentToEnglish();
+            } else {
+                updateContentToFrench();
+            }
+        }
+
+        function updateContentToEnglish() {
+            document.getElementById("heroTitle").innerText = "Hello, I am BIEN-AIME A. Vicky.";
+            document.getElementById("heroDesc").innerText = "Electronic engineer & programmer analyst.";
+            document.getElementById("aboutTitle").innerText = "About Me";
+            document.getElementById("nameNationalityTitle").innerText = "Name & Nationality:";
+            document.getElementById("fullName").innerText = "Full name: BIEN-AIME Alias Vicky";
+            document.getElementById("nationality").innerText = "I am of Haitian origin and nationality.";
+            document.getElementById("educationTitle").innerText = "Formations:";
+            document.getElementById("educationContent").innerHTML = "Training in Electronic Engineering - Faculty of Sciences (FDS) of the State University of Haiti (UEH).<br>Web Development Training in Python / JavaScript - edX.<br>Web Development Training in Spring Boot / React - Udemy";
+            document.getElementById("skillsTitle").innerText = "Skills:";
+            document.getElementById("skillsList").innerHTML = `
+                <li>I am familiar with data structures (stack, queue, linked list, ...).</li>
+                <li>Languages: C, Assembly, Python, Java and JavaScript.</li>
+                <li>Database managers: Oracle, MySQL, PostgreSQL, SQLite.</li>
+                <li>Tools: git, github, aws.</li>
+            `;
+            document.getElementById("experienceTitle").innerText = "Expériences:";
+            document.getElementById("experienceContent").innerHTML = "November 2022 - May 2023 | Internship position at Digicel HT in the Transmission Department.<br>July 2023 - September 2023 | Internship position at Turbo System SA as a Programmer Analyst.<br>October 2023 - Present | Junior Programmer Analyst at Turbo System SA.";
+            document.getElementById("portfolioTitle").innerText = "Portfolio";
+            document.getElementById("ecommerceTitle").innerText = "An eCommerce Site";
+            document.getElementById("ecommerceDesc").innerText = "Project type: web application\nBackend: Python(Django)\nFrontend: JavaScript\nDatabase: SQLite";
+            document.getElementById("encyclopediaTitle").innerText = "An Encyclopedia Site";
+            document.getElementById("encyclopediaDesc").innerText = "Project type: web application\nBackend: Python(Django)\nFrontend: JavaScript\nDatabase: SQLite";
+            document.getElementById("mailServiceTitle").innerText = "A Mail Service Site";
+            document.getElementById("mailServiceDesc").innerText = "Project type: web application\nBackend: Python(Django)\nFrontend: JavaScript\nDatabase: SQLite";
+            document.getElementById("socialNetworkTitle").innerText = "A Social Network Site";
+            document.getElementById("socialNetworkDesc").innerText = "Project type: web application\nBackend: Python(Django)\nFrontend: JavaScript\nDatabase: SQLite";
+            document.getElementById("elearningTitle").innerText = "An eLearning Platform";
+            document.getElementById("elearningDesc").innerText = "Project type: web application\nBackend: Python(Django)\nFrontend: JavaScript\nDatabase: SQLite";
+            document.getElementById("elibraryTitle").innerText = "An eLibrary Platform";
+            document.getElementById("elibraryDesc").innerText = "Project Type: web application\nBackend: Java(Spring Boot)\nFrontend: JavaScript(Angular)\nDatabase: MySQL";
+            document.getElementById("contactTitle").innerText = "Contact Me";
+            document.getElementById("phoneTitle").innerText = "Phone:";
+            document.getElementById("btn-submit").innerText ="Contact me";
+            document.getElementById("homeLink").innerText ="Home";
+            document.getElementById("aboutLink").innerText ="About";
+            document.getElementById("portfolioLink").innerText ="Portfolio";
+            document.getElementById("contactLink").innerText ="Contact";
+            document.getElementById("resume").innerText ="My Resume";
+            document.getElementById("title").innerText ="Vicky's Portfolio";
+        }
+
+        function updateContentToFrench() {
+            document.getElementById("heroTitle").innerText = "Hello, je suis BIEN-AIME A. Vicky.";
+            document.getElementById("heroDesc").innerText = "Ingénieur électronique & analyste programmeur.";
+            document.getElementById("aboutTitle").innerText = "À propos de moi";
+            document.getElementById("nameNationalityTitle").innerText = "Nom(s) & Nationalité:";
+            document.getElementById("fullName").innerText = "Nom complet: BIEN-AIME Alias Vicky";
+            document.getElementById("nationality").innerText = "Je suis haïtien d'origine et de nationalité.";
+            document.getElementById("educationTitle").innerText = "Formations:";
+            document.getElementById("educationContent").innerHTML = "Formation d'ingenerie électronique - Faculté des Sciences(FDS) de l'Université d'État d'Haïti(UEH).<br>Formation web Python / javascript - edX<br>Formation web Spring Boot / React - Udemy";
+            document.getElementById("skillsTitle").innerText = "Compétences:";
+            document.getElementById("skillsList").innerHTML = `
+                <li>Je suis familier avec les structures de données (pile, file, liste chaînée, ...).</li>
+                <li>Langages: C, Assembleur, Python, Java et JavaScript.</li>
+                <li>Gestionnaires de base de données: Oracle, MySQL, PostgreSQL, SQLite.</li>
+                <li>Outils: git, github, aws.</li>
+            `;
+            document.getElementById("experienceTitle").innerText = "Expériences:";
+            document.getElementById("experienceContent").innerHTML = "Novembre 2022 - Mai 2023 | Position de stagiaire à la digicel HT dans le departement transmission.<br>Juillet 2023 - Septembre 2023 | Position de stagiaire à la Turbo System SA comme analyste programmeur.<br>Octobre 2023 - Présent | Analyste programmeur Junior à la Turbo System SA.";
+            document.getElementById("portfolioTitle").innerText = "Portfolio";
+            document.getElementById("ecommerceTitle").innerText = "Un site eCommerce";
+            document.getElementById("ecommerceDesc").innerText = "Type de projet: application web\nBackend: Python(Django)\nFrontend: JavaScript\nBase de données: SQLite";
+            document.getElementById("encyclopediaTitle").innerText = "Un site d'encyclopédie";
+            document.getElementById("encyclopediaDesc").innerText = "Type de projet: application web\nBackend: Python(Django)\nFrontend: JavaScript\nBase de données: SQLite";
+            document.getElementById("mailServiceTitle").innerText = "Un site de services de mail";
+            document.getElementById("mailServiceDesc").innerText = "Type de projet: application web\nBackend: Python(Django)\nFrontend: JavaScript\nBase de données: SQLite";
+            document.getElementById("socialNetworkTitle").innerText = "Un site de réseaux sociaux";
+            document.getElementById("socialNetworkDesc").innerText = "Type de projet: application web\nBackend: Python(Django)\nFrontend: JavaScript\nBase de données: SQLite";
+            document.getElementById("elearningTitle").innerText = "Une plateforme e-learning";
+            document.getElementById("elearningDesc").innerText = "Type de projet: application web\nBackend: Python(Django)\nFrontend: JavaScript\nBase de données: SQLite";
+            document.getElementById("elibraryTitle").innerText = "Une plateforme e-library";
+            document.getElementById("elibraryDesc").innerText = "Type de projet: application web\nBackend: Java(Spring Boot)\nFrontend: JavaScript(Angular)\nBase de données: MySQL";
+            document.getElementById("contactTitle").innerText = "Contactez-moi";
+            document.getElementById("phoneTitle").innerText = "Téléphone:";
+            document.getElementById("btn-submit").innerText ="Contactez-moi";
+            document.getElementById("homeLink").innerText ="Accueil";
+            document.getElementById("aboutLink").innerText ="A propos";
+            document.getElementById("portfolioLink").innerText ="Portfolio";
+            document.getElementById("contactLink").innerText ="Contact";
+            document.getElementById("resume").innerText ="Mon Résumé";
+            document.getElementById("title").innerText ="Portfolio De Vicky";
+        }
+
+        function setLanguage(lang) {
+            if (lang === 'fr') {
+                updateContentToFrench();
+                document.getElementById("languageDisplay").innerText = "Français";
+            } else if (lang === 'en') {
+                updateContentToEnglish();
+                document.getElementById("languageDisplay").innerText = "English";
+            }
+        }
+    </script>
 </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-<script src="./statics/js/app.js"></script>
 </html>
